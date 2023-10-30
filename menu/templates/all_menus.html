@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}
+  My Cafe - List of all menus
+{% endblock %}
+
+
+{% block content %}
+  <h1>Menus</h1>
+  
+  <ul>
+    {% for x in mymenus %}
+      <li><a href="details/{{ x.id }}">{{ x.item }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
